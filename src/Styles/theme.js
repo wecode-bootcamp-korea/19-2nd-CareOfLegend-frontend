@@ -16,7 +16,7 @@ const theme = {
 
   mainOrange: 'rgba(241, 87, 75, 1)',
 
-  Lora : 'font-family : "Lora", serif'
+  Lora : "Lora, serif;"
 };
 
 
