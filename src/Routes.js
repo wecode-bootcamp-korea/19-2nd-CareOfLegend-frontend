@@ -7,7 +7,6 @@ import ProductDetail from './Pages/ProductDetail/ProductDetail';
 import ProductList from './Pages/ProductList/ProductList';
 import Quiz from './Pages/Quiz/Quiz';
 import Signup from './Pages/Signup/Signup';
-import GlobalStyle from './Styles/GlobalStyle';
 
 class Routes extends Component{
   render(){
