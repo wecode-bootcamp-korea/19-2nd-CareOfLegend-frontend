@@ -8,12 +8,6 @@
   font-family: "Questrial", sans-serif;
 }
 
-.Lora {
-  * {
-    font-family: "Lora", serif;
-  }
-}
-
 input {
   border: none;
   outline: none;
@@ -21,6 +15,12 @@ input {
 
 button {
   outline: none;
+}
+
+.Lora {
+  * {
+    font-family: "Lora", serif;
+  }
 }
 
 %flex-center {
