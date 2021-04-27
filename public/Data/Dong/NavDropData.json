@@ -1,0 +1,64 @@
+[
+  {
+    "category_id": 1,
+    "category_name": "VITAMINS",
+    "subcategory_name": [
+      {
+        "id": 1,
+        "subcategory_name": "Letter Vitamins"
+      },
+      {
+        "id": 2,
+        "subcategory_name": "Minerals"
+      },
+      {
+        "id": 3,
+        "subcategory_name": "Herbs"
+      },
+      {
+        "id": 4,
+        "subcategory_name": "Probiotics"
+      },
+      {
+        "id": 5,
+        "subcategory_name": "Specialty"
+      }
+    ]
+  },
+  {
+    "category_id": 2,
+    "category_name": "POWDERS",
+    "subcategory_name": [
+      {
+        "id": 1,
+        "subcategory_name": "Collagen"
+      },
+      {
+        "id": 2,
+        "subcategory_name": "Superberry"
+      },
+      {
+        "id": 3,
+        "subcategory_name": "Protein"
+      },
+      {
+        "id": 4,
+        "subcategory_name": "Maca"
+      }
+    ]
+  },
+  {
+    "category_id": 3,
+    "category_name": "EXTRAS",
+    "subcategory_name": [
+      {
+        "id": 1,
+        "subcategory_name": "Quick Sticks"
+      },
+      {
+        "id": 2,
+        "subcategory_name": "Merch"
+      }
+    ]
+  }
+]
