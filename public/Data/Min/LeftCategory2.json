@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Immunity"
+  },
+  {
+    "id": 2,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Brain"
+  },
+  {
+    "id": 3,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Energy"
+  },
+  {
+    "id": 4,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Eyes"
+  },
+  {
+    "id": 5,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Sleep"
+  },
+  {
+    "id": 6,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Stress"
+  },
+  {
+    "id": 7,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Hear"
+  },
+  {
+    "id": 8,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Joint"
+  },
+  {
+    "id": 9,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Skin"
+  },
+  {
+    "id": 10,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Hair"
+  },
+  {
+    "id": 11,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Nails"
+  },
+  {
+    "id": 12,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Prenatal"
+  },
+  {
+    "id": 13,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Digestion"
+  },
+  {
+    "id": 14,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Bones"
+  },
+  {
+    "id": 15,
+    "icon_url": "https://www.flaticon.com/kr/premium-icon/icons/svg/2655/2655093.svg",
+    "name": "Fitness"
+  }
+]
