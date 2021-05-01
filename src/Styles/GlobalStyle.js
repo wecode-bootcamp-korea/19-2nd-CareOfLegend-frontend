@@ -6,7 +6,6 @@ const GlobalStyle = createGlobalStyle`
 
 * {
   box-sizing: border-box;
-
 }
 
 #root {
@@ -23,8 +22,8 @@ button {
 }
 
 a {
-  text-decoration:none;
-  color: rgba(0,0,0,1);
+  color: rgb(0,0,0);
+  text-decoration: none;
 }
 
 `;

@@ -1,0 +1,20 @@
+[
+  {
+    "main_card_gif": "https://media.giphy.com/media/yTUK7ZSEswX6GJQmya/giphy.gif",
+    "alt": "move",
+    "text1": "Take the quiz",
+    "text2": "Tell us little about yourself. We're good listeners"
+  },
+  {
+    "main_card_gif": "https://media.giphy.com/media/CKKoQaLLD8ZB6/giphy.gif",
+    "alt": "exercise",
+    "text1": "Get nutrients that work",
+    "text2": "Get your personalized recommendation. Backed by science and delivered to you."
+  },
+  {
+    "main_card_gif": "https://media.giphy.com/media/3oriOcC1Oc10FzdpTy/giphy.gif",
+    "alt": "pills",
+    "text1": "Stick with it long term",
+    "text2": "Keep the conversation going. We'll adjust as your health needs change."
+  }
+]
