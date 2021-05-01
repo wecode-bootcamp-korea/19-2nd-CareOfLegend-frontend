@@ -1,24 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import { FaUser, FaBoxOpen } from 'react-icons/fa';
 import ShopDrop from '../Nav/Component/ShopDrop';
 import LearnDrop from '../Nav/Component/LearnDrop';
 import styled from 'styled-components';
-import ProfileBox from './Component/ProfileBox';
+
+import { LOGIN_API } from '../../Config';
 
 function Nav() {
   const [data, setData] = useState([]);
-  const [changeColor, setChangeColor] = useState(false);
+  const [changeColor, setChangeColor] = useState(null);
   const [openCategory, setOpenCategory] = useState(-1);
-  //const [login, setLogin] = useState(false);
+  const [profile, setProfile] = useState({ name: '', image: null });
+
+  const history = useHistory();
 
   const onScroll = () => {
     let y = window.scrollY;
     if (y > 120) {
-      setChangeColor(true);
+      setChangeColor('white');
     } else {
-      setChangeColor(false);
+      setChangeColor(null);
     }
   };
 
@@ -31,54 +35,96 @@ function Nav() {
     axios.get('/Data/Dong/NavDropData.json').then(res => setData(res.data));
   }, []);
 
-  // useEffect(() => {
-  //   axios
-  //     .get('http://10.58.0.71:8000/products/categories')
-  //     .then(res => setData(res.data.result));
-  // }, []);
+  useEffect(() => {
+    const option = {
+      url: `${LOGIN_API}/users/profile`,
+      method: 'GET',
+      headers: {
+        Authorization: localStorage.getItem('ACCESS_TOKEN'),
+      },
+    };
+    axios(option).then(col => {
+      setProfile({
+        image: col.data.results.profile_image_url,
+        name: col.data.results.nickname,
+      });
+    });
+  }, []);
+
+  const goToLogin = () => {
+    history.push('/login');
+  };
+
+  const goToMain = () => {
+    history.push('/');
+  };
 
   return (
     <NavWrapper onScroll={() => setChangeColor('white')}>
       <NavInner background={changeColor} color={changeColor}>
         <Categories>
-          <Shop
-            type="button"
-            onMouseEnter={() => setOpenCategory(1)}
-            onClick={() => setOpenCategory(1)}
-          >
-            SHOP
-          </Shop>
-          <Learn
-            type="button"
-            onMouseEnter={() => setOpenCategory(2)}
-            onClick={() => setOpenCategory(2)}
-          >
-            LEARN
-          </Learn>
+          <ShopContainer>
+            <Shop
+              type="button"
+              onMouseEnter={() => setOpenCategory(1)}
+              onClick={() => setOpenCategory(1)}
+            >
+              SHOP
+            </Shop>
+            {openCategory === 1 && (
+              <ShopDrop
+                data={data}
+                closeCategory={setOpenCategory}
+                onMouseEnter={() => setChangeColor('white')}
+              />
+            )}
+          </ShopContainer>
+          <LearnContainer>
+            <Learn
+              type="button"
+              onMouseEnter={() => setOpenCategory(2)}
+              onClick={() => setOpenCategory(2)}
+            >
+              LEARN
+            </Learn>
+            {openCategory === 2 && (
+              <LearnDrop
+                data={data}
+                closeCategory={setOpenCategory}
+                onMouseEnter={() => setChangeColor('white')}
+              />
+            )}
+          </LearnContainer>
           <Target type="button">
             <span>CARE/OF X TARGET</span>
             <New>NEW</New>
           </Target>
         </Categories>
-        <MainTitle> care/of/legend </MainTitle>
-        <NavIcon>
-          <SignIn>SIGN IN</SignIn>
-          <MyPage>
-            <UserIcon />
-          </MyPage>
-          <GoCart to="/cart">
-            <Box />
-          </GoCart>
-
-          <GoQuiz to="/quiz">Take the quiz</GoQuiz>
-        </NavIcon>
+        <MainTitle onClick={goToMain}> care/of/legend </MainTitle>
+        {profile.name && profile.image ? (
+          <NavIcon>
+            <ProfileName onClick={goToLogin}>{profile.name}</ProfileName>
+            <ProfileImage>
+              <Img src={profile.image} alt="" />
+            </ProfileImage>
+            <GoCart to="/cart">
+              <Box />
+            </GoCart>
+            <GoQuiz to="/quiz">Take the quiz</GoQuiz>
+          </NavIcon>
+        ) : (
+          <NavIcon>
+            <SignIn onClick={goToLogin}>SIGN IN</SignIn>
+            <MyPage>
+              <UserIcon />
+            </MyPage>
+            <GoCart to="/cart">
+              <Box />
+            </GoCart>
+            <GoQuiz to="/quiz">Take the quiz</GoQuiz>
+          </NavIcon>
+        )}
       </NavInner>
-      {openCategory === 1 && (
-        <ShopDrop data={data} closeCategory={setOpenCategory} />
-      )}
-      {openCategory === 2 && (
-        <LearnDrop data={data} closeCategory={setOpenCategory} />
-      )}
     </NavWrapper>
   );
 }
@@ -116,6 +162,8 @@ const Categories = styled.div`
   justify-content: space-around;
 `;
 
+const ShopContainer = styled.div``;
+
 const Shop = styled.button`
   height: 80px;
   margin-right: 30px;
@@ -129,14 +177,48 @@ const Shop = styled.button`
     color: ${({ theme }) => theme.mainOrange};
   }
 `;
+
+const LearnContainer = styled.div``;
+
 const Learn = styled(Shop)``;
-const Target = styled(Shop)``;
+const Target = styled(Shop)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const NavIcon = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: auto;
+`;
+
+const ProfileName = styled(Link)`
+  margin-left: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  &:hover {
+    color: ${({ theme }) => theme.mainOrange};
+  }
+`;
+
+const ProfileImage = styled.div`
+  width: 50px;
+  height: 50px;
+  margin: 0 0 5px 30px;
+  border: 1px solid ${props => props.theme.mainOrange};
+  border-radius: 50%;
+  overflow: hidden;
+`;
+
+const Img = styled.img`
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
 `;
 
 const New = styled.span`
@@ -156,6 +238,7 @@ const MainTitle = styled.h1`
 `;
 
 const SignIn = styled(Link)`
+  margin-left: 30px;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -168,7 +251,7 @@ const MyPage = styled(Link)`
   display: flex;
   align-items: center;
   height: 80px;
-  margin: 0 12px;
+  margin: 0 12px 0 30px;
 
   i {
     font-size: 32px;
@@ -183,7 +266,9 @@ const Box = styled(FaBoxOpen)`
   font-size: 30px;
 `;
 
-const GoCart = styled(MyPage)``;
+const GoCart = styled(MyPage)`
+  margin-left: 30px;
+`;
 
 const GoQuiz = styled(Link)`
   display: flex;
@@ -191,7 +276,7 @@ const GoQuiz = styled(Link)`
   align-items: center;
   width: 165px;
   height: 50px;
-  margin-left: 12px;
+  margin-left: 30px;
   border: 2px solid ${({ theme }) => theme.mainOrange};
   border-radius: 30px;
   background: ${({ theme }) => theme.mainOrange};
