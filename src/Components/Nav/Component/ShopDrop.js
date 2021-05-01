@@ -49,6 +49,9 @@ function ShopDrop({ data, closeCategory }) {
 export default ShopDrop;
 
 const ShopDropWrapper = styled.div`
+  position: absolute;
+  top: 80px;
+  left: 0;
   display: flex;
   flex-direction: row;
   width: 850px;
