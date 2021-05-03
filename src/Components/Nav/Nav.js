@@ -11,7 +11,7 @@ function Nav() {
   const [data, setData] = useState([]);
   const [changeColor, setChangeColor] = useState(false);
   const [openCategory, setOpenCategory] = useState(-1);
-  const [login, setLogin] = useState(false);
+  //const [login, setLogin] = useState(false);
 
   const onScroll = () => {
     let y = window.scrollY;
