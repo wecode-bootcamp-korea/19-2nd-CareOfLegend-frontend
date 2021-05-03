@@ -19,7 +19,9 @@ function ShopDrop({ data, closeCategory }) {
                   item.subcategory_name.map(list => {
                     return (
                       <SubCategory key={list.id}>
-                        <Link to="/productlist">{list.subcategory_name}</Link>
+                        <Contents to="/productlist">
+                          {list.subcategory_name}
+                        </Contents>
                       </SubCategory>
                     );
                   })}
@@ -65,6 +67,9 @@ const ShopDropSub = styled.div`
 const DropCategory = styled.ul`
   display: flex;
   flex-direction: column;
+  &:hover {
+    color: ${({ theme }) => theme.mainOrange};
+  }
 `;
 
 const Category = styled.li`
@@ -79,6 +84,9 @@ const SubCategory = styled.li`
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
+`;
+
+const Contents = styled(Link)`
   &:hover {
     color: ${({ theme }) => theme.mainOrange};
   }
