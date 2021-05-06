@@ -1,0 +1,366 @@
+[
+  {
+    "quiz_num": 1,
+    "quiz_tem": 1,
+    "symptom": "",
+    "question": "Are you:",
+    "sub_question": "",
+    "answer_info": [
+      {
+        "id": 1,
+        "content": "Male"
+      },
+      {
+        "id": 2,
+        "content": "Female"
+      },
+      {
+        "id": 3,
+        "content": "Non-binary"
+      }
+    ]
+  },
+  {
+    "quiz_num": 2,
+    "quiz_tem": 2,
+    "symptom": "",
+    "question": "How old are you?",
+    "sub_question": "",
+    "answer_info": []
+  },
+  {
+    "quiz_num": 3,
+    "quiz_tem": 3,
+    "symptom": "",
+    "question": "What should we explore?",
+    "sub_question": "We ask about 3 to 5 questions per goal",
+    "answer_info": [
+      {
+        "goal_id": 1,
+        "goal_img": "../images/끼야.png",
+        "goal_alt": "no img",
+        "goal_name": "Immunity"
+      },
+      {
+        "goal_id": 2,
+        "goal_img": "../images/heart.png",
+        "goal_alt": "no img",
+        "goal_name": "Sleep"
+      },
+      {
+        "goal_id": 3,
+        "goal_img": "../images/끼야.png",
+        "goal_alt": "no img",
+        "goal_name": "Stress"
+      },
+      {
+        "goal_id": 4,
+        "goal_img": "../images/heart.png",
+        "goal_alt": "no img",
+        "goal_name": "Energy"
+      },
+      {
+        "goal_id": 5,
+        "goal_img": "../images/끼야.png",
+        "goal_alt": "no img",
+        "goal_name": "Fitness"
+      },
+      {
+        "goal_id": 6,
+        "goal_img": "../images/heart.png",
+        "goal_alt": "no img",
+        "goal_name": "Digestion"
+      },
+      {
+        "goal_id": 7,
+        "goal_img": "../images/끼야.png",
+        "goal_alt": "no img",
+        "goal_name": "Brain"
+      },
+      {
+        "goal_id": 8,
+        "goal_img": "../images/heart.png",
+        "goal_alt": "no img",
+        "goal_name": "Hair"
+      },
+      {
+        "goal_id": 9,
+        "goal_img": "../images/끼야.png",
+        "goal_alt": "no img",
+        "goal_name": "Skin"
+      },
+      {
+        "goal_id": 10,
+        "goal_img": "../images/heart.png",
+        "goal_alt": "no img",
+        "goal_name": "Nail"
+      },
+      {
+        "goal_id": 11,
+        "goal_img": "../images/끼야.png",
+        "goal_alt": "no img",
+        "goal_name": "Heart"
+      },
+      {
+        "goal_id": 12,
+        "goal_img": "../images/heart.png",
+        "goal_alt": "no img",
+        "goal_name": "Bones"
+      }
+    ]
+  },
+  {
+    "quiz_num": 4,
+    "quiz_tem": 4,
+    "symptom": "",
+    "question": "On an average day, you eat fruit:",
+    "sub_question": "Like a medium apple, a banana, or a 1/2 cup berries",
+    "answer_info": [
+      {
+        "q_card_id": 1,
+        "q_card_img": "../images/angel.png",
+        "q_card_alt": "no img",
+        "card_title": "Rarely",
+        "card_description": ""
+      },
+      {
+        "q_card_id": 2,
+        "q_card_img": "../images/smile (1).png",
+        "q_card_alt": "no img",
+        "card_title": "Once or twice",
+        "card_description": ""
+      },
+      {
+        "q_card_id": 3,
+        "q_card_img": "../images/heart.png",
+        "q_card_alt": "no img",
+        "card_title": "Three or more times",
+        "card_description": ""
+      }
+    ]
+  },
+  {
+    "quiz_num": 5,
+    "quiz_tem": 4,
+    "symptom": "",
+    "question": "On an average day, you eat Vegetables:",
+    "sub_question": "Like 1/2 cup cooked vegetables or one cup raw vegetables",
+    "answer_info": [
+      {
+        "q_card_id": 1,
+        "q_card_img": "../images/angel.png",
+        "q_card_alt": "no img",
+        "card_title": "Rarely",
+        "card_description": ""
+      },
+      {
+        "q_card_id": 2,
+        "q_card_img": "../images/smile (1).png",
+        "q_card_alt": "no img",
+        "card_title": "Once or twice",
+        "card_description": ""
+      },
+      {
+        "q_card_id": 3,
+        "q_card_img": "../images/heart.png",
+        "q_card_alt": "no img",
+        "card_title": "Three or more times",
+        "card_description": ""
+      }
+    ]
+  },
+  {
+    "quiz_num": 6,
+    "quiz_tem": 4,
+    "symptom": "",
+    "question": "On an average day, you eat high fiber foods:",
+    "sub_question": "Like grains, seeds, beans, green vegetables, berries.",
+    "answer_info": [
+      {
+        "q_card_id": 1,
+        "q_card_img": "../images/angel.png",
+        "q_card_alt": "no img",
+        "card_title": "Rarely",
+        "card_description": ""
+      },
+      {
+        "q_card_id": 2,
+        "q_card_img": "../images/smile (1).png",
+        "q_card_alt": "no img",
+        "card_title": "Once or twice",
+        "card_description": ""
+      },
+      {
+        "q_card_id": 3,
+        "q_card_img": "../images/heart.png",
+        "q_card_alt": "no img",
+        "card_title": "Three or more times",
+        "card_description": ""
+      }
+    ]
+  },
+  {
+    "quiz_num": 7,
+    "quiz_tem": 5,
+    "symptom": "",
+    "question": "Do you often consume 15 or more alcoholic drinks in a week?",
+    "sub_question": "",
+    "answer_info": []
+  },
+  {
+    "quiz_num": 8,
+    "quiz_tem": 1,
+    "symptom": "",
+    "question": "Do you have any of these allergies?",
+    "sub_question": "select all that apply.",
+    "answer_info": [
+      {
+        "id": 1,
+        "content": "None"
+      },
+      {
+        "id": 2,
+        "content": "Milk"
+      },
+      {
+        "id": 3,
+        "content": "Eggs"
+      },
+      {
+        "id": 4,
+        "content": "Fish"
+      },
+      {
+        "id": 5,
+        "content": "Shellfish"
+      },
+      {
+        "id": 6,
+        "content": "Ragweed"
+      },
+      {
+        "id": 7,
+        "content": "Tree nuts"
+      },
+      {
+        "id": 8,
+        "content": "Peanuts"
+      },
+      {
+        "id": 9,
+        "content": "Soybeans"
+      },
+      {
+        "id": 10,
+        "content": "Wheat"
+      }
+    ]
+  },
+  {
+    "quiz_num": 9,
+    "quiz_tem": 4,
+    "symptom": "FITNESS",
+    "question": "In an average week, you exercise:",
+    "sub_question": "",
+    "answer_info": [
+      {
+        "q_card_id": 1,
+        "q_card_img": "../images/angel.png",
+        "q_card_alt": "no img",
+        "card_title": "Rarely",
+        "card_description": ""
+      },
+      {
+        "q_card_id": 2,
+        "q_card_img": "../images/smile (1).png",
+        "q_card_alt": "no img",
+        "card_title": "Once or twice",
+        "card_description": ""
+      },
+      {
+        "q_card_id": 3,
+        "q_card_img": "../images/heart.png",
+        "q_card_alt": "no img",
+        "card_title": "Three or more times",
+        "card_description": ""
+      }
+    ]
+  },
+  {
+    "quiz_num": 10,
+    "quiz_tem": 5,
+    "symptom": "",
+    "question": "Do you smoke?",
+    "sub_question": "",
+    "answer_info": [
+      {
+        "id": 1,
+        "content": "Yes"
+      },
+      {
+        "id": 2,
+        "content": "No"
+      }
+    ]
+  },
+  {
+    "quiz_num": 11,
+    "quiz_tem": 4,
+    "symptom": "",
+    "question": "For traditional Eastern Medicines like Ayurveda, you are:",
+    "sub_question": "",
+    "answer_info": [
+      {
+        "q_card_id": 1,
+        "q_card_img": "../images/angel.png",
+        "q_card_alt": "no img",
+        "card_title": "A believer",
+        "card_description": "There is wisdom in the ancients"
+      },
+      {
+        "q_card_id": 2,
+        "q_card_img": "../images/smile (1).png",
+        "q_card_alt": "no img",
+        "card_title": "Open",
+        "card_description": "You're unsure without more information."
+      },
+      {
+        "q_card_id": 3,
+        "q_card_img": "../images/heart.png",
+        "q_card_alt": "no img",
+        "card_title": "Skeptical",
+        "card_description": "Alternative medicines are bogus."
+      }
+    ]
+  },
+  {
+    "quiz_num": 12,
+    "quiz_tem": 4,
+    "symptom": "",
+    "question": "If a new product with promising research is available, you:",
+    "sub_question": "",
+    "answer_info": [
+      {
+        "q_card_id": 1,
+        "q_card_img": "../images/angel.png",
+        "q_card_alt": "no img",
+        "card_title": "Want it first",
+        "card_description": "You're cutting edge."
+      },
+      {
+        "q_card_id": 2,
+        "q_card_img": "../images/smile (1).png",
+        "q_card_alt": "no img",
+        "card_title": "Learn more",
+        "card_description": "You're cautiously optimistic."
+      },
+      {
+        "q_card_id": 3,
+        "q_card_img": "../images/heart.png",
+        "q_card_alt": "no img",
+        "card_title": "Stay away",
+        "card_description": "Conclusive research takes time."
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "result_id": 1,
+    "result_img": "../../Images/capsule.jpg",
+    "result_goods_name": "Vegetarian Collagen",
+    "result_goods_for": "skin",
+    "result_goods_info": "You told us you have dry skin"
+  },
+  {
+    "result_id": 2,
+    "result_img": "../../Images/capsule2.jpg",
+    "result_goods_name": "Ceramides",
+    "result_goods_for": "skin",
+    "result_goods_info": "You told us you are trying to address the appearance of wrinkles and hyperigmentation"
+  },
+  {
+    "result_id": 3,
+    "result_img": "../../Images/capsule3.jpg",
+    "result_goods_name": "Rhodiola",
+    "result_goods_for": "stress",
+    "result_goods_info": "You told us you tend to feel drained after a stressful day"
+  },
+  {
+    "result_id": 4,
+    "result_img": "../../Images/capsule2.jpg",
+    "result_goods_name": "Magnesium",
+    "result_goods_for": "sleep",
+    "result_goods_info": "You told us you have trouble sleeping at night"
+  },
+  {
+    "result_id": 5,
+    "result_img": "../../Images/capsule.jpg",
+    "result_goods_name": "Astaxanthin",
+    "result_goods_for": "skin",
+    "result_goods_info": "You told us you live in a city"
+  }
+]
