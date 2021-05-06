@@ -7,6 +7,9 @@ import Login from './Pages/Login/Login';
 import ProductDetail from './Pages/ProductDetail/ProductDetail';
 import ProductList from './Pages/ProductList/ProductList';
 import Quiz from './Pages/Quiz/Quiz';
+import Greeting from './Pages/Quiz/Greeting';
+import QnATemplate from './Pages/Quiz/QnATemplate';
+import Result from './Pages/Quiz/Result';
 import Signup from './Pages/Signup/Signup';
 
 class Routes extends Component {
@@ -21,6 +24,9 @@ class Routes extends Component {
           <Route exact path="/productdetail" component={ProductDetail} />
           <Route exact path="/productlist" component={ProductList} />
           <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/quiz/hi" component={Greeting} />
+          <Route exact path="/quiz/tem" component={QnATemplate} />
+          <Route exact path="/quiz/result" component={Result} />
           <Route exact path="/signup" component={Signup} />
         </Switch>
       </Router>

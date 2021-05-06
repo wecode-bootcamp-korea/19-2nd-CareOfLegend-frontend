@@ -6,7 +6,6 @@ import { FaUser, FaBoxOpen } from 'react-icons/fa';
 import ShopDrop from '../Nav/Component/ShopDrop';
 import LearnDrop from '../Nav/Component/LearnDrop';
 import styled from 'styled-components';
-
 import { LOGIN_API } from '../../Config';
 
 function Nav() {
@@ -14,7 +13,6 @@ function Nav() {
   const [changeColor, setChangeColor] = useState(null);
   const [openCategory, setOpenCategory] = useState(-1);
   const [profile, setProfile] = useState({ name: '', image: null });
-
   const history = useHistory();
 
   const onScroll = () => {
