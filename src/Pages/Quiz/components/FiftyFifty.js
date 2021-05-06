@@ -1,19 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 function FiftyFifty({ quizData, send }) {
-  // useEffect(()=>{
-  //   axios({
-  //     method: 'post',
-  //     url: '/',
-  //     data: {
-  //       product_id:
-  //     }
-  //   });
-  // })
-
-  console.log('777777');
-
   return (
     <QnAWrapper>
       <QuestionWrapper>

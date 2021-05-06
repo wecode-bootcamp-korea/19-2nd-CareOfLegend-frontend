@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { QUIZ_API } from '../../Config';
 import { useHistory } from 'react-router-dom';
 import WriteInfo from './components/WriteInfo';
 import BoxSelectCard from './components/BoxSelectCard';
@@ -13,40 +12,22 @@ function QnATemplate() {
   const [quizInfo, setQuizInfo] = useState({});
   const history = useHistory();
 
-  // const goResult = () => {
-  //   const temNum = quizInfo.quiz_num;
-  //   if (temNum === 12) {
-  //     alert('마지막 문제입니다.');
-  //     history.push('/quiz/result');
-  //   } else {
-  //     axios.get('/Data/Dong/QuizData.json').then(res => {
-  //       setQuizInfo(res.data[quizInfo.quiz_num++]);
-  //     });
-  //   }
-  // };
-
   const goResult = () => {
     const temNum = quizInfo.quiz_num;
     if (temNum === 12) {
       alert('마지막 문제입니다.');
       history.push('/quiz/result');
     } else {
-      axios.get(`${QUIZ_API}/users/quizzes/1`).then(res => {
-        setQuizInfo(res.data[quizInfo.question_id++]);
+      axios.get('/Data/Dong/QuizData.json').then(res => {
+        setQuizInfo(res.data[quizInfo.quiz_num++]);
       });
     }
   };
 
-  // useEffect(() => {
-  //   axios.get('/Data/Dong/QuizData.json').then(res => {
-  //     setQuizInfo(res.data[0]);
-  //   });
-  // }, []);
-
   useEffect(() => {
-    axios
-      .get(`${QUIZ_API}/users/quizzes/1`)
-      .then(res => setQuizInfo(res.data.result));
+    axios.get('/Data/Dong/QuizData.json').then(res => {
+      setQuizInfo(res.data[0]);
+    });
   }, []);
 
   const Answer = {
@@ -66,7 +47,7 @@ function QnATemplate() {
 
   return (
     <QuizPage>
-      <QuizTemplate>{Answer[quizInfo.question_id]}</QuizTemplate>
+      <QuizTemplate>{Answer[quizInfo.quiz_num]}</QuizTemplate>
     </QuizPage>
   );
 }

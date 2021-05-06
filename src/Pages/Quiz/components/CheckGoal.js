@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 function CheckGoal({ quizData, send }) {
   const [color, setColor] = useState(false);
-
-  // useEffect(()=>{
-  //   axios({
-  //     method: 'post',
-  //     url: '/',
-  //     data: {
-  //       product_id:
-  //     }
-  //   });
-  // })
-
-  const changeColor = () => {
-    return setColor(true);
-  };
 
   return (
     <QnAWrapper>
@@ -28,12 +14,12 @@ function CheckGoal({ quizData, send }) {
       <AnswerWrapper>
         <CheckGoalWrapper>
           {quizData.answer_info &&
-            quizData.answer_info.map((info, idx) => {
+            quizData.answer_info.map(info => {
               return (
-                <CheckGoalInner key={info.quiz_num}>
-                  <CheckBtnOff onClick={changeColor} color={color}>
+                <CheckGoalInner key={info.goal_id}>
+                  <CheckBtn color={color}>
                     <GoalIcon src={info.goal_img} alt={info.goal_alt} />
-                  </CheckBtnOff>
+                  </CheckBtn>
                   <GoalName>{info.goal_name}</GoalName>
                 </CheckGoalInner>
               );
@@ -101,7 +87,7 @@ const CheckGoalInner = styled.div`
   outline: none;
 `;
 
-const CheckBtnOff = styled.button`
+const CheckBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,10 +96,9 @@ const CheckBtnOff = styled.button`
   height: 120px;
   border: 2px solid rgb(245, 241, 237);
   border-radius: 50%;
-`;
-
-const CheckBtnOn = styled(CheckBtnOff)`
-  background: ${props => props.color && props.theme.mainOrange};
+  &:hover {
+    background: ${({ theme }) => theme.mainOrange};
+  }
 `;
 
 const GoalIcon = styled.img`

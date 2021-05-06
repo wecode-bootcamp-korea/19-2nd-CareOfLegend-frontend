@@ -118,14 +118,14 @@
     "answer_info": [
       {
         "q_card_id": 1,
-        "q_card_img": "../images/angel.png",
+        "q_card_img": "../images/smile.png",
         "q_card_alt": "no img",
         "card_title": "Rarely",
         "card_description": ""
       },
       {
         "q_card_id": 2,
-        "q_card_img": "../images/smile (1).png",
+        "q_card_img": "../images/끼야.png",
         "q_card_alt": "no img",
         "card_title": "Once or twice",
         "card_description": ""
@@ -148,14 +148,14 @@
     "answer_info": [
       {
         "q_card_id": 1,
-        "q_card_img": "../images/angel.png",
+        "q_card_img": "../images/smile.png",
         "q_card_alt": "no img",
         "card_title": "Rarely",
         "card_description": ""
       },
       {
         "q_card_id": 2,
-        "q_card_img": "../images/smile (1).png",
+        "q_card_img": "../images/smileH.png",
         "q_card_alt": "no img",
         "card_title": "Once or twice",
         "card_description": ""
@@ -178,14 +178,14 @@
     "answer_info": [
       {
         "q_card_id": 1,
-        "q_card_img": "../images/angel.png",
+        "q_card_img": "../images/smileH.png",
         "q_card_alt": "no img",
         "card_title": "Rarely",
         "card_description": ""
       },
       {
         "q_card_id": 2,
-        "q_card_img": "../images/smile (1).png",
+        "q_card_img": "../images/smile.png",
         "q_card_alt": "no img",
         "card_title": "Once or twice",
         "card_description": ""
@@ -265,14 +265,14 @@
     "answer_info": [
       {
         "q_card_id": 1,
-        "q_card_img": "../images/angel.png",
+        "q_card_img": "../images/smile.png",
         "q_card_alt": "no img",
         "card_title": "Rarely",
         "card_description": ""
       },
       {
         "q_card_id": 2,
-        "q_card_img": "../images/smile (1).png",
+        "q_card_img": "../images/smileH.png",
         "q_card_alt": "no img",
         "card_title": "Once or twice",
         "card_description": ""
@@ -312,14 +312,14 @@
     "answer_info": [
       {
         "q_card_id": 1,
-        "q_card_img": "../images/angel.png",
+        "q_card_img": "../images/smileH.png",
         "q_card_alt": "no img",
         "card_title": "A believer",
         "card_description": "There is wisdom in the ancients"
       },
       {
         "q_card_id": 2,
-        "q_card_img": "../images/smile (1).png",
+        "q_card_img": "../images/smile.png",
         "q_card_alt": "no img",
         "card_title": "Open",
         "card_description": "You're unsure without more information."
@@ -342,14 +342,14 @@
     "answer_info": [
       {
         "q_card_id": 1,
-        "q_card_img": "../images/angel.png",
+        "q_card_img": "../images/smileH.png",
         "q_card_alt": "no img",
         "card_title": "Want it first",
         "card_description": "You're cutting edge."
       },
       {
         "q_card_id": 2,
-        "q_card_img": "../images/smile (1).png",
+        "q_card_img": "../images/smile.png",
         "q_card_alt": "no img",
         "card_title": "Learn more",
         "card_description": "You're cautiously optimistic."

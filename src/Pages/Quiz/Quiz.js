@@ -18,20 +18,14 @@ function Quiz() {
     4: <Result resultData={resultData} />,
   };
 
-  // useEffect(() => {
-  //   axios.get('./Data/Dong/QuizData.json').then(res => setQuizData(res.data));
-  //   axios
-  //     .get('./Data/Dong/ResultData.json')
-  //     .then(res => setResultData(res.data));
-  // }, []);
-
   useEffect(() => {
+    axios.get('./Data/Dong/QuizData.json').then(res => setQuizData(res.data));
     axios
-      .get(`${QUIZ_API}/users/quizzes/1`)
-      .then(res => setQuizData(res.data.result));
+      .get('./Data/Dong/ResultData.json')
+      .then(res => setResultData(res.data));
   }, []);
 
-  return <QuizPage>{Template[3]} </QuizPage>;
+  return <QuizPage>{Template[1]} </QuizPage>;
 }
 
 export default Quiz;

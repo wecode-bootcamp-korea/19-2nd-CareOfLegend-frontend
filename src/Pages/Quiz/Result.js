@@ -18,19 +18,6 @@ function Result() {
       .then(res => setResultData(res.data));
   }, []);
 
-  // useEffect(() => {
-  //   axios
-  //     .get('http://10.58.0.71:8000/products/categories')
-  //     .then(res => setData(res.data.result));
-  // axios({
-  //     method: 'post',
-  //     url: '/',
-  //     data: {
-  //       product_id:
-  //     }
-  //   });
-  // }, []);
-
   return (
     <QuizPage>
       <ResultMain>
@@ -52,7 +39,7 @@ function Result() {
           </CheckGoalInner>
           <LinkWrapper>
             <GoLink to="/cart">Go Cart</GoLink>
-            <GoLink to="/cart">Go Main</GoLink>
+            <GoLink to="/">Go Main</GoLink>
           </LinkWrapper>
         </ResultText>
 

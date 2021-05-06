@@ -1,56 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import axios from 'axios';
-import { ANSWER_API } from '../../../Config';
+import React from 'react';
 import styled from 'styled-components';
 
 function CheckBtn({ quizData, send }) {
-  const [check, setCheck] = useState([]);
-  const history = useHistory();
-  const newSend = send;
-  console.log(newSend);
-
-  const post = () => {
-    const option = {
-      url: `${ANSWER_API}/users/kakao-login`,
-      method: 'POST',
-      headers: {
-        Authorization: '1',
-      },
-    };
-    axios(option).then(newSend);
-  };
-
-  // useEffect(()=>{
-  //   axios({
-  //     method: 'post',
-  //     url: '/',
-  //     data: {
-  //       product_id:,
-  //     }
-  //   });
-  // })
-
   return (
     <QnAWrapper>
       <QuestionWrapper>
-        <Symptom></Symptom>
-        <Question>{quizData.query}</Question>
-        <SubQuestion></SubQuestion>
+        <Symptom>{quizData.symptom}</Symptom>
+        <Question>{quizData.question}</Question>
+        <SubQuestion>{quizData.sub_question}</SubQuestion>
       </QuestionWrapper>
       <AnswerWrapper>
         <BtnCheckWrapper>
-          {quizData.options &&
-            quizData.options.map(info => {
+          {quizData.answer_info &&
+            quizData.answer_info.map(info => {
               return (
                 <BtnCheck type="button" key={info.id}>
                   <RadioBtn type="checkbox"></RadioBtn>
-                  <span>{info.name}</span>
+                  <span>{info.content}</span>
                 </BtnCheck>
               );
             })}
         </BtnCheckWrapper>
-        <GoNextBtn onClick={post}>Next</GoNextBtn>
+        <GoNextBtn onClick={send}>Next</GoNextBtn>
       </AnswerWrapper>
     </QnAWrapper>
   );
