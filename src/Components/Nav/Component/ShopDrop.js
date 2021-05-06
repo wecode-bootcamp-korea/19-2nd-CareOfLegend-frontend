@@ -15,8 +15,8 @@ function ShopDrop({ data, closeCategory }) {
             return (
               <DropCategory key={item.category_id}>
                 <Category>{item.category_name} </Category>
-                {item.subcategory_name &&
-                  item.subcategory_name.map(list => {
+                {item.subcategories &&
+                  item.subcategories.map(list => {
                     return (
                       <SubCategory key={list.id}>
                         <Contents to="/productlist">
@@ -58,6 +58,7 @@ const ShopDropWrapper = styled.div`
   margin-left: 40px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 10px;
+  z-index: 100;
 `;
 
 const ShopDropSub = styled.div`

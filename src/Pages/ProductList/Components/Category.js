@@ -40,7 +40,7 @@ const Category = props => {
                   id={elements.health_goal_id}
                   src={elements.icon_url}
                 />
-                <div id={elements.health_goal_id}>{elements.name}</div>
+                <Test id={elements.health_goal_id}>{elements.name}</Test>
               </CategoryList>
             ))}
       </LeftCategory>
@@ -92,4 +92,8 @@ const CategoryList = styled.li`
 const CategoryImoge = styled.img`
   width: 20px;
   height: 20px;
+`;
+
+const Test = styled.div`
+  padding-left: 5px;
 `;

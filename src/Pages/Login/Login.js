@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { withRouter, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
-import { LOGIN_API } from '../../Config';
+import { API } from '../../Config';
 import WelcomeModal from './component/WelcomeModal';
 
 const { Kakao, localStorage } = window;
@@ -16,7 +16,7 @@ const Login = () => {
     Kakao.Auth.login({
       success: function (kakao) {
         const option = {
-          url: `${LOGIN_API}/users/kakao-login`,
+          url: `${API}/users/kakao-login`,
           method: 'POST',
           headers: {
             Authorization: kakao.access_token,

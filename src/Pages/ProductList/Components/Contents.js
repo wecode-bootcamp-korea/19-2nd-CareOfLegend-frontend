@@ -5,7 +5,7 @@ import Category from './Category';
 import FrontDisplay from './FrontDisplay';
 import ProductListNav from './ProductListNav';
 import Main from './Main';
-import { HEALTH_GOAL, CATEGORY_API } from '../../../Config';
+import { API } from '../../../Config';
 
 const Contents = () => {
   const [categoryData, setCategoryData] = useState([]);
@@ -21,16 +21,16 @@ const Contents = () => {
   };
 
   useEffect(() => {
-    getData(CATEGORY_API);
+    getData(`${API}/products/subcategories`);
   }, []);
 
   const navVisible = value => {
     if (value === 'category') {
-      getData(CATEGORY_API);
+      getData(`${API}/products/subcategories`);
     }
 
     if (value === 'health') {
-      getData(HEALTH_GOAL);
+      getData(`${API}/products/health-goals`);
     }
   };
 

@@ -23,6 +23,7 @@ const Display = styled.div`
   ${props => props.theme.flexAllCenter}
   width: 100%;
   height: 300px;
+  /* padding: 100px 0; */
   background-color: rgb(177, 212, 221);
   flex-direction: column;
 `;

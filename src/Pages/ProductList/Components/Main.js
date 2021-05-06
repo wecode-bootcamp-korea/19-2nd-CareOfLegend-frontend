@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import Card from './Card';
-import { PRODUCT_API } from '../../../Config';
+import { API } from '../../../Config';
 
 const Main = props => {
   const [card, setCard] = useState();
@@ -10,7 +10,7 @@ const Main = props => {
   const { categoryValue, healthValue } = props;
 
   const getData = url => {
-    axios({ method: 'get', url: `${PRODUCT_API}products${url}` }).then(res => {
+    axios({ method: 'get', url: `${API}/products${url}` }).then(res => {
       setCard(res.data.result);
     });
   };
@@ -38,7 +38,7 @@ const Main = props => {
     //장바구니 담기
     axios({
       method: 'POST',
-      url: `${PRODUCT_API}orders/carts`,
+      url: `${API}/orders/carts`,
       data: {
         user_id: 1,
         product_id: Number(id),
@@ -53,7 +53,8 @@ const Main = props => {
           <Card
             key={id}
             id={elements.product_id}
-            image={elements.product_tumbnail_image}
+            cimage={elements.product_tumbnail_image}
+            himage={elements.product_image}
             title={elements.product_name}
             subtitle={elements.product_sub_name}
             price={elements.product_price}

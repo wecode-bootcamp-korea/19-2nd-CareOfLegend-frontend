@@ -8,7 +8,8 @@ const Card = props => {
     price,
     description,
     id,
-    image,
+    cimage,
+    himage,
     basketHandler,
   } = props;
 
@@ -24,7 +25,11 @@ const Card = props => {
   return (
     <MainCard>
       <CardList>
-        <CardImage src={image} alt={title} />
+        {himage !== undefined ? (
+          <CardImage src={himage} alt={title} />
+        ) : (
+          <CardImage src={cimage} alt={title} />
+        )}
         <CardTitle>{title}</CardTitle>
         <CardSubTitle>
           {subtitle}

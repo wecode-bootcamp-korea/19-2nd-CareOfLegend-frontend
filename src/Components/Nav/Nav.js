@@ -6,7 +6,7 @@ import { FaUser, FaBoxOpen } from 'react-icons/fa';
 import ShopDrop from '../Nav/Component/ShopDrop';
 import LearnDrop from '../Nav/Component/LearnDrop';
 import styled from 'styled-components';
-import { LOGIN_API } from '../../Config';
+import { API } from '../../Config';
 
 function Nav() {
   const [data, setData] = useState([]);
@@ -26,12 +26,14 @@ function Nav() {
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
-    axios.get('/Data/Dong/NavDropData.json').then(res => setData(res.data));
+    axios
+      .get(`${API}/products/categories`)
+      .then(res => setData(res.data.result));
   }, []);
 
   useEffect(() => {
     const option = {
-      url: `${LOGIN_API}/users/profile`,
+      url: `${API}/users/profile`,
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('ACCESS_TOKEN'),
@@ -101,7 +103,7 @@ function Nav() {
             <ProfileImage>
               <Img src={profile.image} alt="" />
             </ProfileImage>
-            <GoCart to="/cart">
+            <GoCart to="/basket">
               <Box />
             </GoCart>
             <GoQuiz to="/quiz">Take the quiz</GoQuiz>
@@ -112,7 +114,7 @@ function Nav() {
             <MyPage>
               <UserIcon />
             </MyPage>
-            <GoCart to="/cart">
+            <GoCart to="/basket">
               <Box />
             </GoCart>
             <GoQuiz to="/quiz">Take the quiz</GoQuiz>

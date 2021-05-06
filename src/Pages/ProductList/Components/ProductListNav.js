@@ -51,6 +51,7 @@ const Nav = styled.div`
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.15);
   top: 70px;
+  background-color: white;
   z-index: 1;
 `;
 
