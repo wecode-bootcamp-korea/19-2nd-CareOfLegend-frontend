@@ -27,10 +27,6 @@ function Nav() {
   };
 
   useEffect(() => {
-    console.log(changeColor);
-  }, [changeColor]);
-
-  useEffect(() => {
     window.addEventListener('scroll', onScroll);
     axios.get('/Data/Dong/NavDropData.json').then(res => setData(res.data));
   }, []);
@@ -231,10 +227,13 @@ const New = styled.span`
   font-family: ${({ theme }) => theme.Lora};
 `;
 
-const MainTitle = styled.h1`
+const MainTitle = styled(Link)`
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
+  &:hover {
+    color: ${({ theme }) => theme.mainOrange};
+  }
 `;
 
 const SignIn = styled(Link)`
