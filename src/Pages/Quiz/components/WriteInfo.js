@@ -1,18 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import styled from 'styled-components';
 
 function WriteInfo({ quizData, send }) {
-  // useEffect(()=>{
-  //   axios({
-  //     method: 'post',
-  //     url: '/',
-  //     data: {
-  //       product_id:
-  //     }
-  //   });
-  // })
-
   return (
     <QnAWrapper>
       <QuestionWrapper>
