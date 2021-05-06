@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import { LOGIN_API } from '../../../Config';
+import { API } from '../../../Config';
 
 const { localStorage, URL } = window;
 
@@ -12,7 +12,7 @@ const WelcomModal = props => {
 
   useEffect(() => {
     const option = {
-      url: `${LOGIN_API}/users/profile`,
+      url: `${API}/users/profile`,
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('ACCESS_TOKEN'),
@@ -32,7 +32,7 @@ const WelcomModal = props => {
     form.append('file', profile.sendImage);
 
     const option = {
-      url: `${LOGIN_API}/users/profile`,
+      url: `${API}/users/profile`,
       method: 'POST',
       data: form,
       headers: {

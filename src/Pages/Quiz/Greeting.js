@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { API } from '../../Config';
 import styled from 'styled-components';
 
 function Greeting() {
+  const [profile, setProfile] = useState({ image: null, name: '' });
+
+  useEffect(() => {
+    const option = {
+      url: `${API}/users/profile`,
+      method: 'GET',
+      headers: {
+        Authorization: localStorage.getItem('ACCESS_TOKEN'),
+      },
+    };
+    axios(option).then(col => {
+      setProfile({
+        image: col.data.results.profile_image_url,
+        name: col.data.results.nickname,
+      });
+    });
+  }, []);
   return (
     <QuizPage>
       <GreetingWrapper>
         <Mention>
-          <Link to="/quiz/tem"> Nice to meet you, "입력한닉네임"</Link>
+          <Link to="/quiz/tem"> Nice to meet you, {profile.name}</Link>
         </Mention>
         <GreetingIcon src="https://media.giphy.com/media/YlXnVdWvAkl1AHXpGz/giphy.gif"></GreetingIcon>
       </GreetingWrapper>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { API } from '../../Config';
 import { FaArrowAltCircleUp, FaTint } from 'react-icons/fa';
 import ProductCard from './components/ProductCard';
 import result from './images/result3.jpg';
@@ -9,15 +10,45 @@ import axios from 'axios';
 function Result() {
   const [resultData, setResultData] = useState();
 
+  const [data, setData] = useState();
+
+  const [profile, setProfile] = useState({ image: null, name: '' });
+
+  useEffect(() => {
+    const option = {
+      url: `${API}/users/profile`,
+      method: 'GET',
+      headers: {
+        Authorization: localStorage.getItem('ACCESS_TOKEN'),
+      },
+    };
+    axios(option).then(col => {
+      setProfile({
+        image: col.data.results.profile_image_url,
+        name: col.data.results.nickname,
+      });
+    });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${API}/products/categories`)
+      .then(res => setData(res.data.result[0].category_name));
+  }, []);
+
   const goTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  useEffect(() => {
-    axios
-      .get('./Data/Dong/ResultData.json')
+  const getData = async () => {
+    const res = await axios
+      .get('http://localhost:3000/Data/Dong/ResultData.json')
       .then(res => setResultData(res.data));
-  }, []);
+  };
 
+  useEffect(() => {
+    getData();
+  }, []);
+  //setResultData(res.data)
   return (
     <QuizPage>
       <ResultMain>
@@ -25,7 +56,7 @@ function Result() {
         <ResultText>
           <Recommend>Recommend</Recommend>
           <Opening>
-            Made for <span>어디있는거지</span>
+            Made for <span>{profile.name}</span>
           </Opening>
           <SubOpening>
             Your recommendation is based on your answers and our database of
@@ -34,8 +65,8 @@ function Result() {
             long-term health.
           </SubOpening>
           <CheckGoalInner>
-            <GoalIcon src="/" alt="symptom" />
-            <GoalName>선택증상 정보 넘겨주기</GoalName>
+            <GoalIcon src={profile.image} alt="symptom" />
+            <GoalName></GoalName>
           </CheckGoalInner>
           <LinkWrapper>
             <GoLink to="/cart">Go Cart</GoLink>
@@ -46,12 +77,12 @@ function Result() {
         <ResultProducts>
           <RecommendNav>
             <Opening>
-              Made for <span>어디있니 데이터야</span>
+              Made for <span>{profile.name}</span>
             </Opening>
           </RecommendNav>
           <RecommendProducts>
             <Products>
-              <ProductCategoryName>데이터주세요</ProductCategoryName>
+              <ProductCategoryName>{data}</ProductCategoryName>
               <Period>30 day supply of nutrients tailored for you.</Period>
               <ProductList>
                 {resultData &&

@@ -3,7 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 import Total from './Total';
 import BasketProducts from './BasketProducts';
-import { BASKET_API } from '../../../Config';
+import { API } from '../../../Config';
 
 const Main = () => {
   const [productsData, setProductsData] = useState([]);
@@ -11,7 +11,7 @@ const Main = () => {
   const [total, setTotal] = useState([]);
 
   useEffect(() => {
-    axios.get(`${BASKET_API}orders/carts/1`).then(res => {
+    axios.get(`${API}/orders/carts`).then(res => {
       setProductsData(res.data.result);
     });
   }, []);
@@ -26,7 +26,7 @@ const Main = () => {
   }, [productsData]);
 
   const deleteHandler = e => {
-    axios.delete(`${BASKET_API}orders/carts-detail/${e.target.id}/1`);
+    axios.delete(`${API}/orders/carts-detail/${e.target.id}`);
 
     setProductsData(
       productsData.filter(i => i.product_id !== Number(e.target.id))
