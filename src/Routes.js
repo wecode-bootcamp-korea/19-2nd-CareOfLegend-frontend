@@ -11,6 +11,7 @@ import Greeting from './Pages/Quiz/Greeting';
 import QnATemplate from './Pages/Quiz/QnATemplate';
 import Result from './Pages/Quiz/Result';
 import Signup from './Pages/Signup/Signup';
+import Basket from './Pages/Basket/Basket';
 
 class Routes extends Component {
   render() {
@@ -28,6 +29,7 @@ class Routes extends Component {
           <Route exact path="/quiz/tem" component={QnATemplate} />
           <Route exact path="/quiz/result" component={Result} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/basket" component={Basket} />
         </Switch>
       </Router>
     );

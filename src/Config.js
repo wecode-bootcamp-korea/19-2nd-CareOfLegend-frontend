@@ -11,3 +11,4 @@ export const PRODUCT_API = `http://10.58.7.199:8000/`;
 export const CART_API = ``;
 export const CATEGORY_API = `http://10.58.0.95:8000/products/subcategories`;
 export const HEALTH_GOAL = `http://10.58.0.95:8000/products/health-goals`;
+export const BASKET_API = `http://10.58.7.199:8000/`;
