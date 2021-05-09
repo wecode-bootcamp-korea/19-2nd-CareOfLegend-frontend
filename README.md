@@ -1,4 +1,5 @@
-#Team Care of Legend (전설의 케어)
+# Team Care of Legend (전설의 케어)
+---
 
 ##  프로젝트 소개
 React를 사용한 맞춤형 영양제 사이트 'Care of'(https://takecareof.com/) 웹사이트 클론.
@@ -9,7 +10,7 @@ React를 사용한 맞춤형 영양제 사이트 'Care of'(https://takecareof.co
 🔙 BackEnd: 김현영, 박형섭, 안정현(PM)
 
 
-💻 Front-end Work Details
+💻 🌸 Front-end Work Details
 
 ### 김희열
 - `Sign up`: 
@@ -36,7 +37,7 @@ React를 사용한 맞춤형 영양제 사이트 'Care of'(https://takecareof.co
 
 
 
-## 💻 Back-end Work Details
+## 💻 🌼 Back-end Work Details
 ###김현영
 
 ###박형섭
